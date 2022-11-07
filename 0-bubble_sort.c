@@ -6,11 +6,16 @@ void bubble_sort(int *array, size_t size)
 	int j = 0;
 	int temp;
 	int noswap = 0;
+	int max = size - 1;
 
-	for(i = 0; i < size - 1; i++)
+
+	if(!array || size < 2)
+		return;
+
+	for(i = 0; i < max; i++)
 	{
 		noswap = 0;
-		for(j = 0; j < size - i - 1; j++)
+		for(j = 0; j < max - i; j++)
 		{
 			if(array[j] > array[j + 1])
 			{
